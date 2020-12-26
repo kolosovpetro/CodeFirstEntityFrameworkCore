@@ -18,3 +18,7 @@
 - Inside project DataAccess create PostgeSqlDbContext, inherrit it from DbContext in Entity Framework
 - Get proper connection string for SQL Server database. For localhost it is: "Data Source=DESKTOP-P87PH2B;Initial Catalog=CodeFirstEntityFramework;Integrated Security=true;"
 - Get proper connection string for Postgre SQL database. For localhost it is: "Server=localhost;User Id=postgres;Password=postgres;Database=CodeFirstEntityFramework;"
+- Build a relations between models, for instance, one-to-one, one-to-many, many-to-many. Refer to
+  - https://www.learnentityframeworkcore.com/configuration/one-to-one-relationship-configuration
+  - https://www.learnentityframeworkcore.com/relationships/managing-one-to-many-relationships
+  - https://www.learnentityframeworkcore.com/configuration/many-to-many-relationship-configuration
