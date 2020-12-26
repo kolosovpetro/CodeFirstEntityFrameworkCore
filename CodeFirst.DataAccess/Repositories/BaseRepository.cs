@@ -62,5 +62,10 @@ namespace CodeFirst.Repositories
         {
             return await _dbSet.Where(where).ToListAsync();
         }
+
+        public async Task<bool> SaveChangesAsync()
+        {
+            return await _baseContext.SaveChangesAsync() > 0;
+        }
     }
 }

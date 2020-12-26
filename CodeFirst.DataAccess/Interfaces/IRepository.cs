@@ -15,5 +15,6 @@ namespace CodeFirst.Interfaces
         Task<T> GetSingleAsync(Expression<Func<T, bool>> where);
         Task<IEnumerable<T>> GetAllAsync();
         Task<IEnumerable<T>> GetManyAsync(Expression<Func<T, bool>> where);
+        Task<bool> SaveChangesAsync();
     }
 }

@@ -17,4 +17,8 @@
       <ProjectReference Include="..\CodeFirst.DataAccess\CodeFirst.DataAccess.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="SqlServerRepositoryTests" />
+    </ItemGroup>
+
 </Project>
