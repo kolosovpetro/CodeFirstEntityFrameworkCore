@@ -43,6 +43,9 @@ Simple example of Entity Framework Core Code-First approach.
 - Update Postgre SQL database, use: dotnet-ef database update --project CodeFirst.DataAccess --context PostgreSqlContext
 - Write unit tests for SqlServerContext
 - Write unit tests for PostgreSqlContext
+- Create Generic repository interface
+- Implement Generic repository interface
+- Test Generic Repository
 
 ## Notes
 

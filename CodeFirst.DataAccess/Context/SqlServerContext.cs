@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CodeFirst.Context
 {
-    public class SqlServerContext : BaseContext
+    public class SqlServerContext : RentalContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
