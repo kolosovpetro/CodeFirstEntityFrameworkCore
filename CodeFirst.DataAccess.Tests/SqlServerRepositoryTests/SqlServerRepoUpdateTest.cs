@@ -16,9 +16,14 @@ namespace CodeFirst.DataAccess.Tests.SqlServerRepositoryTests
             var movie = await repo.GetByIdAsync(2);
             movie.Should().NotBeNull();
             movie.MovieId.Should().Be(2);
-            movie.Title = "Ghostbusters";
+            var previousTitle = movie.Title;
+            movie.Title += " updated";
             repo.Update(movie);
             var success = await repo.SaveChangesAsync();
+            success.Should().BeTrue();
+            movie.Title = previousTitle;
+            repo.Update(movie);
+            success = await repo.SaveChangesAsync();
             success.Should().BeTrue();
         }
     }

@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Linq;
+using System.Threading.Tasks;
 using CodeFirst.Context;
 using CodeFirst.Models.Models;
 using CodeFirst.Repositories;
@@ -25,6 +26,8 @@ namespace CodeFirst.DataAccess.Tests.SqlServerRepositoryTests
             await repo.AddAsync(movie);
             var success = await repo.SaveChangesAsync();
             success.Should().BeTrue();
+            var getAll = await repo.GetAllAsync();
+            getAll.Last().Title.Should().Be("Lord of the rings");
         }
     }
 }
