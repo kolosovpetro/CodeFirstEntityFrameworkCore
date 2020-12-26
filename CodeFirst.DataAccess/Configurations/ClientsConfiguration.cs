@@ -1,4 +1,5 @@
-﻿using CodeFirst.Models.Models;
+﻿using System;
+using CodeFirst.Models.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -21,13 +22,13 @@ namespace CodeFirst.Configurations
 
             builder.ToTable("clients");
 
-            // builder.HasData(
-            //     new Clients(1, "Hank", "Hill", Convert.ToDateTime("1954-04-19")),
-            //     new Clients(2, "Brian", "Griffin", Convert.ToDateTime("2011-09-11")),
-            //     new Clients(3, "Gary", "Goodspeed", Convert.ToDateTime("1989-03-12")),
-            //     new Clients(4, "Bob", "Belcher", Convert.ToDateTime("1977-01-23")),
-            //     new Clients(5, "Lisa", "Simpson", Convert.ToDateTime("2012-05-09")),
-            //     new Clients(6, "Rick", "Sanchez", Convert.ToDateTime("1965-03-17")));
+            builder.HasData(
+                new Clients(1, "Hank", "Hill", Convert.ToDateTime("1954-04-19")),
+                new Clients(2, "Brian", "Griffin", Convert.ToDateTime("2011-09-11")),
+                new Clients(3, "Gary", "Goodspeed", Convert.ToDateTime("1989-03-12")),
+                new Clients(4, "Bob", "Belcher", Convert.ToDateTime("1977-01-23")),
+                new Clients(5, "Lisa", "Simpson", Convert.ToDateTime("2012-05-09")),
+                new Clients(6, "Rick", "Sanchez", Convert.ToDateTime("1965-03-17")));
         }
     }
 }

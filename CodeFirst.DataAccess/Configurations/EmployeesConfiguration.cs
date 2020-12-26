@@ -23,48 +23,18 @@ namespace CodeFirst.Configurations
 
             builder.ToTable("employees");
 
-            // builder.HasData(
-            //     new Employees
-            //     {
-            //         EmployeeId = 1,
-            //         Firstname = "John",
-            //         Lastname = "Smith",
-            //         Salary = 150.0f,
-            //         City = "New York"
-            //     },
-            //     new Employees
-            //     {
-            //         EmployeeId = 2,
-            //         Firstname = "Ben",
-            //         Lastname = "Johnson",
-            //         Salary = 250.0f,
-            //         City = "New York"
-            //     },
-            //     new Employees
-            //     {
-            //         EmployeeId = 3,
-            //         Firstname = "Louis",
-            //         Lastname = "Armstrong",
-            //         Salary = 75.0f,
-            //         City = "New Orleans"
-            //     },
-            //     new Employees
-            //     {
-            //         EmployeeId = 4,
-            //         Firstname = "John",
-            //         Lastname = "Lennon",
-            //         Salary = 300.0f,
-            //         City = "London"
-            //     }, 
-            //     new Employees
-            //     {
-            //         EmployeeId = 5,
-            //         Firstname = "Peter",
-            //         Lastname = "Gabriel",
-            //         Salary = 150.0f,
-            //         City = "London"
-            //     }
-            // );
+            builder.HasData(
+                new Employees
+                    {EmployeeId = 1, Firstname = "John", Lastname = "Smith", Salary = 150.0f, City = "New York"},
+                new Employees
+                    {EmployeeId = 2, Firstname = "Ben", Lastname = "Johnson", Salary = 250.0f, City = "New York"},
+                new Employees
+                    {EmployeeId = 3, Firstname = "Louis", Lastname = "Armstrong", Salary = 75.0f, City = "New Orleans"},
+                new Employees
+                    {EmployeeId = 4, Firstname = "John", Lastname = "Lennon", Salary = 300.0f, City = "London"},
+                new Employees
+                    {EmployeeId = 5, Firstname = "Peter", Lastname = "Gabriel", Salary = 150.0f, City = "London"}
+            );
         }
     }
 }

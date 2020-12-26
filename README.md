@@ -1,5 +1,7 @@
 # Code First with Entity Framework
 
+Simple example of Entity Framework Core Code-First approach.
+
 ## Data base schema
 
 ![DbSchema](DbSchema.JPG?raw=true)

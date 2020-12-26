@@ -12,5 +12,17 @@ namespace CodeFirst.Models.Models
         // navigational properties
         public virtual Clients Client { get; set; }
         public virtual Copies Copy { get; set; }
+
+        public Rentals()
+        {
+        }
+
+        public Rentals(int clientId, int copyId, DateTime? dateOfRental, DateTime? dateOfReturn)
+        {
+            CopyId = copyId;
+            ClientId = clientId;
+            DateOfRental = dateOfRental;
+            DateOfReturn = dateOfReturn;
+        }
     }
 }

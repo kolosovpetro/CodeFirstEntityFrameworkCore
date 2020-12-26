@@ -9,8 +9,20 @@ namespace CodeFirst.Models.Models
         public string Firstname { get; set; }
         public string Lastname { get; set; }
         public DateTime? Birthday { get; set; }
-
+        
         // navigational properties
         public virtual ICollection<Rentals> Rentals { get; set; }
+
+        public Clients()
+        {
+        }
+
+        public Clients(int clientId, string firstname, string lastname, DateTime? birthday)
+        {
+            ClientId = clientId;
+            Firstname = firstname;
+            Lastname = lastname;
+            Birthday = birthday;
+        }
     }
 }
