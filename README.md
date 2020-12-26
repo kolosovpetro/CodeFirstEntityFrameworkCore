@@ -41,3 +41,14 @@ Simple example of Entity Framework Core Code-First approach.
 - Create migration for PostgreSqlContext, use CLI command: dotnet-ef migrations add PostgreSqlInitialMigration --project CodeFirst.DataAccess --context PostgreSqlContext
 - Update SQL Server database: use: dotnet-ef database update --project CodeFirst.DataAccess --context SqlServerContext
 - Update Postgre SQL database, use: dotnet-ef database update --project CodeFirst.DataAccess --context PostgreSqlContext
+- Write unit tests for SqlServerContext
+- Write unit tests for PostgreSqlContext
+
+## Notes
+
+To get MS SQL connection string proceed:
+- Go to visual studio - Server explorer - Data connections
+- Right click on data connections - Add new connection
+- Type there your server name
+- Click add connection
+- Then in properties of such connection you'd get connection string

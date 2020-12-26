@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirst.DataAccess", "Cod
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirst.Models", "CodeFirst.Models\CodeFirst.Models.csproj", "{9DAAB4FF-7F5C-4243-9EB0-D62A05E8CC3A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirst.DataAccess.Tests", "CodeFirst.DataAccess.Tests\CodeFirst.DataAccess.Tests.csproj", "{2ACF211E-093A-4BC2-8696-34D08C290C1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{9DAAB4FF-7F5C-4243-9EB0-D62A05E8CC3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DAAB4FF-7F5C-4243-9EB0-D62A05E8CC3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DAAB4FF-7F5C-4243-9EB0-D62A05E8CC3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ACF211E-093A-4BC2-8696-34D08C290C1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ACF211E-093A-4BC2-8696-34D08C290C1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ACF211E-093A-4BC2-8696-34D08C290C1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ACF211E-093A-4BC2-8696-34D08C290C1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
