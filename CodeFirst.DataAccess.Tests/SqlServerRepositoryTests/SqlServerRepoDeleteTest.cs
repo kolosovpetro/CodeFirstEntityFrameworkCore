@@ -1,6 +1,5 @@
 ﻿using System.Threading.Tasks;
 using CodeFirst.Context;
-using CodeFirst.Models.Models;
 using CodeFirst.Repositories;
 using FluentAssertions;
 using NUnit.Framework;

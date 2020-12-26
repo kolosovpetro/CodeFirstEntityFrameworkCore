@@ -2,7 +2,6 @@
 using System.Linq;
 using System.Threading.Tasks;
 using CodeFirst.Context;
-using CodeFirst.Models.Models;
 using CodeFirst.Repositories;
 
 namespace CodeFirst.ConsoleUI
