@@ -13,6 +13,14 @@ Simple example of Entity Framework Core Code-First approach.
 - Microsoft.EntityFrameworkCore.SqlServer
 - Npgsql.EntityFrameworkCore.PostgreSQL
 
+## Entity Framework CLI commands
+
+- dotnet-ef migrations add SqlServerInitialMigration --project CodeFirst.DataAccess --context SqlServerContext
+- dotnet-ef migrations add PostgreSqlInitialMigration --project CodeFirst.DataAccess --context PostgreSqlContext
+- dotnet-ef database update --project CodeFirst.DataAccess --context SqlServerContext
+- dotnet-ef database update --project CodeFirst.DataAccess --context PostgreSqlContext
+- dotnet ef migrations remove
+
 ## Roadmap
 
 - Create a separate project Models, where data models are stored
@@ -31,3 +39,5 @@ Simple example of Entity Framework Core Code-First approach.
 - Update PostgreSqlContext with BDSet<T> and override methods OnConfiguring and OnModelCreating.
 - Create migration for SqlServerContext, use CLI command: dotnet-ef migrations add SqlServerInitialMigration --project CodeFirst.DataAccess --context SqlServerContext
 - Create migration for PostgreSqlContext, use CLI command: dotnet-ef migrations add PostgreSqlInitialMigration --project CodeFirst.DataAccess --context PostgreSqlContext
+- Update SQL Server database: use: dotnet-ef database update --project CodeFirst.DataAccess --context SqlServerContext
+- Update Postgre SQL database, use: dotnet-ef database update --project CodeFirst.DataAccess --context PostgreSqlContext
