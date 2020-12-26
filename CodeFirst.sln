@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirst", "CodeFirst\CodeFirst.csproj", "{A0DBEFFC-F0C1-4D80-82A3-815033313DBC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirst.DataAccess", "CodeFirst.DataAccess\CodeFirst.DataAccess.csproj", "{A0DBEFFC-F0C1-4D80-82A3-815033313DBC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirst.Models", "CodeFirst.Models\CodeFirst.Models.csproj", "{9DAAB4FF-7F5C-4243-9EB0-D62A05E8CC3A}"
 EndProject
