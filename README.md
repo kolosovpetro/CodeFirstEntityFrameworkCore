@@ -22,3 +22,4 @@
   - https://www.learnentityframeworkcore.com/configuration/one-to-one-relationship-configuration
   - https://www.learnentityframeworkcore.com/relationships/managing-one-to-many-relationships
   - https://www.learnentityframeworkcore.com/configuration/many-to-many-relationship-configuration
+- Create proper configurations of models, using Fluent API. Configuration should implement IEntityTypeConfiguration<T>.

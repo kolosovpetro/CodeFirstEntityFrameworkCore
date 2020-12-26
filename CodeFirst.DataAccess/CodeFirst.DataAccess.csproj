@@ -15,4 +15,12 @@
       <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.1" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Configurations" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\CodeFirst.Models\CodeFirst.Models.csproj" />
+    </ItemGroup>
+
 </Project>
