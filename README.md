@@ -2,6 +2,8 @@
 
 ## Data base schema
 
+![DbSchema](DbSchema.JPG?raw=true)
+
 ## Which packages to use?
 
 - Microsoft.EntityFrameworkCore
@@ -23,3 +25,5 @@
   - https://www.learnentityframeworkcore.com/relationships/managing-one-to-many-relationships
   - https://www.learnentityframeworkcore.com/configuration/many-to-many-relationship-configuration
 - Create proper configurations of models, using Fluent API. Configuration should implement IEntityTypeConfiguration<T>.
+- Update SqlServerContext with BDSet<T> and override methods OnConfiguring and OnModelCreating.
+- Update PostgreSqlContext with BDSet<T> and override methods OnConfiguring and OnModelCreating.
