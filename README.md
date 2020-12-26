@@ -30,3 +30,4 @@ Simple example of Entity Framework Core Code-First approach.
 - Update SqlServerContext with BDSet<T> and override methods OnConfiguring and OnModelCreating.
 - Update PostgreSqlContext with BDSet<T> and override methods OnConfiguring and OnModelCreating.
 - Create migration for SqlServerContext, use CLI command: dotnet-ef migrations add SqlServerInitialMigration --project CodeFirst.DataAccess --context SqlServerContext
+- Create migration for PostgreSqlContext, use CLI command: dotnet-ef migrations add PostgreSqlInitialMigration --project CodeFirst.DataAccess --context PostgreSqlContext
