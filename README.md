@@ -16,3 +16,5 @@
 - Load packages to DataAccess project. See section Which packages to use?
 - Inside project DataAccess create SqlServerDbContext, inherrit it from DbContext in Entity Framework
 - Inside project DataAccess create PostgeSqlDbContext, inherrit it from DbContext in Entity Framework
+- Get proper connection string for SQL Server database. For localhost it is: "Data Source=DESKTOP-P87PH2B;Initial Catalog=CodeFirstEntityFramework;Integrated Security=true;"
+- Get proper connection string for Postgre SQL database. For localhost it is: "Server=localhost;User Id=postgres;Password=postgres;Database=CodeFirstEntityFramework;"
