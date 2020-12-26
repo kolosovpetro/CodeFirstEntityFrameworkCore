@@ -16,18 +16,5 @@ namespace CodeFirst.Models.Models
         
         // this is composite key to get many to many movies - actors
         public virtual ICollection<Starring> Starring { get; set; }
-        
-        public Movies(int movieId, string title, int year, int ageRestriction, float price)
-        {
-            MovieId = movieId;
-            Title = title;
-            Year = year;
-            AgeRestriction = ageRestriction;
-            Price = price;
-        }
-
-        public Movies()
-        {
-        }
     }
 }

@@ -12,17 +12,5 @@ namespace CodeFirst.Models.Models
 
         // navigational properties
         public virtual ICollection<Rentals> Rentals { get; set; }
-        
-        public Clients(int clientId, string firstname, string lastname, DateTime? birthday)
-        {
-            ClientId = clientId;
-            Firstname = firstname;
-            Lastname = lastname;
-            Birthday = birthday;
-        }
-
-        public Clients()
-        {
-        }
     }
 }

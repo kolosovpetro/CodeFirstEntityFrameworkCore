@@ -14,17 +14,5 @@ namespace CodeFirst.Models.Models
         // navigational properties
         // this is composite key to get many to many movies - actors
         public virtual ICollection<Starring> Starring { get; set; }
-
-        public Actors(int actorId, string firstname, string lastname, DateTime? birthday)
-        {
-            ActorId = actorId;
-            Firstname = firstname;
-            Lastname = lastname;
-            Birthday = birthday;
-        }
-
-        public Actors()
-        {
-        }
     }
 }

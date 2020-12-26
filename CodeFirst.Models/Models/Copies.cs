@@ -14,16 +14,5 @@ namespace CodeFirst.Models.Models
 
         // to maintain many to many copies - rentals
         public virtual ICollection<Rentals> Rentals { get; set; }
-        
-        public Copies(int copyId, int movieId, bool available)
-        {
-            CopyId = copyId;
-            MovieId = movieId;
-            Available = available;
-        }
-
-        public Copies()
-        {
-        }
     }
 }
