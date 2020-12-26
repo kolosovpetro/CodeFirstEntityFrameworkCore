@@ -5,15 +5,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CodeFirst.Context
 {
-    public class SqlServerContext : DbContext
+    public class SqlServerContext : BaseContext
     {
-        public DbSet<Movies> Movies { get; set; }
-        public DbSet<Copies> Copies { get; set; }
-        public DbSet<Starring> Starring { get; set; }
-        public DbSet<Actors> Actors { get; set; }
-        public DbSet<Rentals> Rentals { get; set; }
-        public DbSet<Employees> Employees { get; set; }
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(Connection.SqlServerConnectionString);
