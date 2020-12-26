@@ -3,9 +3,9 @@ using CodeFirst.Models.Models;
 
 namespace CodeFirst.Repositories
 {
-    public class MoviesRepository : RepositoryBase<Movies>
+    public class MoviesBaseRepository : BaseRepository<Movies>
     {
-        public MoviesRepository(RentalContext rentalContext) : base(rentalContext)
+        public MoviesBaseRepository(BaseContext baseContext) : base(baseContext)
         {
         }
         

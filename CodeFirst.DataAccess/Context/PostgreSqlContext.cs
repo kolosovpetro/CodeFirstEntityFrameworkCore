@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CodeFirst.Context
 {
-    public class PostgreSqlContext : RentalContext
+    public class PostgreSqlContext : BaseContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

@@ -9,15 +9,15 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CodeFirst.Repositories
 {
-    public abstract class RepositoryBase<T> : IRepository<T> where T : class
+    public abstract class BaseRepository<T> : IRepository<T> where T : class
     {
-        private readonly RentalContext _rentalContext;
+        private readonly BaseContext _baseContext;
         private readonly DbSet<T> _dbSet;
 
-        public RepositoryBase(RentalContext rentalContext)
+        protected BaseRepository(BaseContext baseContext)
         {
-            _rentalContext = rentalContext;
-            _dbSet = _rentalContext.Set<T>();
+            _baseContext = baseContext;
+            _dbSet = _baseContext.Set<T>();
         }
 
         public async Task AddAsync(T entity)
@@ -28,7 +28,7 @@ namespace CodeFirst.Repositories
         public void Update(T entity)
         {
             _dbSet.Attach(entity);
-            _rentalContext.Entry(entity).State = EntityState.Modified;
+            _baseContext.Entry(entity).State = EntityState.Modified;
         }
 
         public void Delete(T entity)

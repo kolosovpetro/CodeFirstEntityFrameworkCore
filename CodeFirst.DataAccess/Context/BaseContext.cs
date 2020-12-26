@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CodeFirst.Context
 {
-    public abstract class RentalContext : DbContext
+    public abstract class BaseContext : DbContext
     {
         public DbSet<Movies> Movies { get; set; }
         public DbSet<Copies> Copies { get; set; }
