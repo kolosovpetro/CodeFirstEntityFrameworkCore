@@ -29,3 +29,4 @@ Simple example of Entity Framework Core Code-First approach.
 - Create proper configurations of models, using Fluent API. Configuration should implement IEntityTypeConfiguration<T>.
 - Update SqlServerContext with BDSet<T> and override methods OnConfiguring and OnModelCreating.
 - Update PostgreSqlContext with BDSet<T> and override methods OnConfiguring and OnModelCreating.
+- Create migration for SqlServerContext, use CLI command: dotnet-ef migrations add SqlServerInitialMigration --project CodeFirst.DataAccess --context SqlServerContext
