@@ -23,9 +23,9 @@ Simple example of Entity Framework Core Code-First approach.
 
 ## Roadmap
 
-- Create a separate project `Models`, where data models are stored
-- Create a separate project `DataAccess`, that is responsible for interraction with database
-- Load packages to `DataAccess` project. See section *Which packages to use?*
+- Create a separate project `Models`, where data models are stored.
+- Create a separate project `DataAccess`, that is responsible for interraction with database.
+- Load packages to `DataAccess` project. See section ***Which packages to use?***.
 - Get proper connection string for SQL Server database. For localhost it is: 
 
 	`"Data Source=DESKTOP-P87PH2B;Initial Catalog=CodeFirstEntityFramework;Integrated Security=true;"`
@@ -40,7 +40,7 @@ Simple example of Entity Framework Core Code-First approach.
   - https://www.learnentityframeworkcore.com/relationships/managing-one-to-many-relationships
   - https://www.learnentityframeworkcore.com/configuration/many-to-many-relationship-configuration
 
-- Create proper configurations of models, using Fluent API. Configuration should implement `IEntityTypeConfiguration<T>` from Entity Framework namespace
+- Create proper configurations of models, using Fluent API. Configuration should implement `IEntityTypeConfiguration<T>` interface from Entity Framework namespace
 - Create `BaseContext` inherrit it from `DbContext` in Entity Framework namespace, add related sets `BDSet<T>`, where `T` -- models.
 - Create `SqlServerContext`, inherrit it from `BaseContext` and override methods `OnConfiguring` and `OnModelCreating`.
 - Create `PostgreSqlContext`, inherrit it from `BaseContext` and override methods `OnConfiguring` and `OnModelCreating`.
