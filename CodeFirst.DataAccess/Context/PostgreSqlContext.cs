@@ -1,6 +1,5 @@
 ﻿using CodeFirst.Configurations;
 using CodeFirst.ConnectionStrings;
-using CodeFirst.Models.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace CodeFirst.Context
