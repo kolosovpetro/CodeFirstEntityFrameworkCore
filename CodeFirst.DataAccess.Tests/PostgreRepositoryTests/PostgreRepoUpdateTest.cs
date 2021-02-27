@@ -12,7 +12,7 @@ namespace CodeFirst.DataAccess.Tests.PostgreRepositoryTests
         [Test]
         public async Task PostgreRepo_Update_Test()
         {
-            var repo = new MoviesRepository(new PostgreSqlContext());
+            var repo = new MoviesRepository(new PostgresDbContext());
             var movie = await repo.GetByIdAsync(2);
             movie.Should().NotBeNull();
             movie.MovieId.Should().Be(2);

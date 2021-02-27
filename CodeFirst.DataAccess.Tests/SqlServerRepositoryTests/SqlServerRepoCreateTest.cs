@@ -14,7 +14,7 @@ namespace CodeFirst.DataAccess.Tests.SqlServerRepositoryTests
         [Test]
         public async Task SqlServer_Repo_Create_Test()
         {
-            var repo = new MoviesRepository(new SqlServerContext());
+            var repo = new MoviesRepository(new SqlServerDbContext());
             var movie = new Movies
             {
                 Title = "Lord of the rings",

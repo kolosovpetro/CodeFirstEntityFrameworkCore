@@ -12,7 +12,7 @@ namespace CodeFirst.DataAccess.Tests.SqlServerRepositoryTests
         [Test]
         public async Task SqlServerRepo_Delete_Test()
         {
-            var repo = new MoviesRepository(new SqlServerContext());
+            var repo = new MoviesRepository(new SqlServerDbContext());
             var movie = await repo.GetByIdAsync(1);
             movie.Should().NotBeNull();
             movie.MovieId.Should().Be(1);

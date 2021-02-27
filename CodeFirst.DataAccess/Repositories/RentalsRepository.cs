@@ -5,7 +5,7 @@ namespace CodeFirst.Repositories
 {
     public class RentalsRepository : BaseRepository<Rentals>
     {
-        public RentalsRepository(BaseContext baseContext) : base(baseContext)
+        public RentalsRepository(BaseDbContext baseContext) : base(baseContext)
         {
         }
     }

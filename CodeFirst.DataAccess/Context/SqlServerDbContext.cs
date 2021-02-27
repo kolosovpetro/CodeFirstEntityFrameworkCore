@@ -1,15 +1,25 @@
-﻿using CodeFirst.Configurations;
-using CodeFirst.ConnectionStrings;
-using CodeFirst.Models.Models;
+﻿using System;
+using CodeFirst.Configurations;
 using Microsoft.EntityFrameworkCore;
 
 namespace CodeFirst.Context
 {
-    public class SqlServerContext : BaseContext
+    public class SqlServerDbContext : BaseDbContext
     {
+        public SqlServerDbContext(DbContextOptions options) : base(options)
+        {
+        }
+
+        public SqlServerDbContext()
+        {
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(Connection.SqlServerConnectionString);
+            var connectionString = Environment.GetEnvironmentVariable("SQLSERVER_MOVIES_LOCAL_CONNSTR");
+            optionsBuilder.UseSqlServer(connectionString
+                                        ?? throw new NullReferenceException(
+                                            $"Connection string is not got from environment {nameof(connectionString)}"));
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

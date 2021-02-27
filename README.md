@@ -6,33 +6,36 @@ Simple example of Entity Framework Core Code-First approach.
 
 ![DbSchema](DbSchema.JPG?raw=true)
 
-## Which packages to use?
+## Required packages and settings
 
 - `Microsoft.EntityFrameworkCore`
 - `Microsoft.EntityFrameworkCore.Tools`
 - `Microsoft.EntityFrameworkCore.SqlServer`
 - `Npgsql.EntityFrameworkCore.PostgreSQL`
+- Envirnomental variable `SQLSERVER_MOVIES_LOCAL_CONNSTR`
+- Envirnomental variable `POSTGRES_MOVIES_LOCAL_CONNSTR`
 
 ## Entity Framework CLI commands
 
-- `dotnet-ef migrations add SqlServerInitialMigration --project CodeFirst.DataAccess --context SqlServerContext`
-- `dotnet-ef migrations add PostgreSqlInitialMigration --project CodeFirst.DataAccess --context PostgreSqlContext`
-- `dotnet-ef database update --project CodeFirst.DataAccess --context SqlServerContext`
-- `dotnet-ef database update --project CodeFirst.DataAccess --context PostgreSqlContext`
+- `dotnet-ef migrations add SqlServerInitialMigration --project CodeFirst.DataAccess --context SqlServerDbContext`
+- `dotnet-ef migrations add PostgreSqlInitialMigration --project CodeFirst.DataAccess --context PostgresDbContext`
+- `dotnet-ef database update --project CodeFirst.DataAccess --context SqlServerDbContext`
+- `dotnet-ef database update --project CodeFirst.DataAccess --context PostgresDbContext`
 - `dotnet ef migrations remove`
 
 ## Roadmap
 
 - Create a separate project `Models`, where data models are stored.
 - Create a separate project `DataAccess`, that is responsible for interraction with database.
-- Load packages to `DataAccess` project. See section ***Which packages to use?***.
-- Get proper connection string for SQL Server database. For localhost it is: 
+- Load packages to `DataAccess` project. See section **Required packages**.
 
-	`"Data Source=DESKTOP-P87PH2B;Initial Catalog=CodeFirstEntityFramework;Integrated Security=true;"`
+- Set proper environmental variable for connection string for SQL Server database. For localhost it is: 
 
-- Get proper connection string for Postgre SQL database. For localhost it is: 
+	`"Data Source=DESKTOP-RN0NICT;Initial Catalog=MoviesCodeFirst;Integrated Security=true;"`
 
-	`"Server=localhost;User Id=postgres;Password=postgres;Database=CodeFirstEntityFramework;"`
+- Set proper environmental variable for connection string for Postgre SQL database. For localhost it is: 
+
+	`"Server=localhost;User Id=postgres;Password=postgres;Database=MoviesCodeFirst;"`
 
 - Build a relations between models, for instance, `one-to-one`, `one-to-many`, `many-to-many` according to the database diagram. 
 	Refer to
@@ -46,22 +49,22 @@ Simple example of Entity Framework Core Code-First approach.
 - Create `PostgreSqlContext`, inherrit it from `BaseContext` and override methods `OnConfiguring` and `OnModelCreating`.
 - Create migration for `SqlServerContext`, use CLI command: 
 
-	`dotnet-ef migrations add SqlServerInitialMigration --project CodeFirst.DataAccess --context SqlServerContext`
+	`dotnet-ef migrations add SqlServerInitialMigration --project CodeFirst.DataAccess --context SqlServerDbContext`
 	
 - Create migration for `PostgreSqlContext`, use CLI command: 
 
-	`dotnet-ef migrations add PostgreSqlInitialMigration --project CodeFirst.DataAccess --context PostgreSqlContext`
+	`dotnet-ef migrations add PostgreSqlInitialMigration --project CodeFirst.DataAccess --context PostgresDbContext`
 	
 - Update SQL Server database, use CLI command: 
 
-	`dotnet-ef database update --project CodeFirst.DataAccess --context SqlServerContext`
+	`dotnet-ef database update --project CodeFirst.DataAccess --context SqlServerDbContext`
 
 - Update Postgre SQL database, use CLI command: 
 
-	`dotnet-ef database update --project CodeFirst.DataAccess --context PostgreSqlContext`
+	`dotnet-ef database update --project CodeFirst.DataAccess --context PostgresDbContext`
 
-- Write unit tests for `SqlServerContext`
-- Write unit tests for `PostgreSqlContext`
+- Write unit tests for `SqlServerDbContext`
+- Write unit tests for `PostgresDbContext`
 - Create Generic repository interface
 - Implement Generic repository interface
 - Test Generic Repositories

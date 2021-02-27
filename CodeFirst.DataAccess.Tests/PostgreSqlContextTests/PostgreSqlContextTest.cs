@@ -11,7 +11,7 @@ namespace CodeFirst.DataAccess.Tests.PostgreSqlContextTests
         [Test]
         public void Postgre_Context_Test()
         {
-            BaseContext postgreContext = new PostgreSqlContext();
+            BaseDbContext postgreContext = new PostgresDbContext();
             var mov = postgreContext.Movies.First(x => x.MovieId == 3);
             mov.Title.Should().Be("Terminator");
         }

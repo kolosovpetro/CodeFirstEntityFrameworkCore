@@ -7,10 +7,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
-namespace CodeFirst.Migrations.PostgreSql
+namespace CodeFirst.Migrations.PostgresDb
 {
-    [DbContext(typeof(PostgreSqlContext))]
-    [Migration("20201226024455_PostgreSqlInitialMigration")]
+    [DbContext(typeof(PostgresDbContext))]
+    [Migration("20210227145206_PostgreSqlInitialMigration")]
     partial class PostgreSqlInitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

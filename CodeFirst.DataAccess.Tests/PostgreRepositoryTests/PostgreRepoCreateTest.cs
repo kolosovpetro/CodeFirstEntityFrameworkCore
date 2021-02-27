@@ -14,7 +14,7 @@ namespace CodeFirst.DataAccess.Tests.PostgreRepositoryTests
         [Test]
         public async Task Postgre_Repo_Create_Test()
         {
-            var repo = new MoviesRepository(new PostgreSqlContext());
+            var repo = new MoviesRepository(new PostgresDbContext());
             var movie = new Movies
             {
                 Title = "Lord of the rings",

@@ -11,10 +11,10 @@ namespace CodeFirst.Repositories
 {
     public abstract class BaseRepository<T> : IRepository<T> where T : class
     {
-        private readonly BaseContext _baseContext;
+        private readonly BaseDbContext _baseContext;
         private readonly DbSet<T> _dbSet;
 
-        protected BaseRepository(BaseContext baseContext)
+        protected BaseRepository(BaseDbContext baseContext)
         {
             _baseContext = baseContext;
             _dbSet = _baseContext.Set<T>();
