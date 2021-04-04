@@ -12,15 +12,15 @@ namespace CodeFirst.ConsoleUI
         {
             var postgreRepo = new MoviesRepository(new PostgresDbContext());
             var movies = await postgreRepo.GetAllAsync();
-            movies.ToList().ForEach(Console.WriteLine);
+            movies.OrderBy(x => x.MovieId).ToList().ForEach(Console.WriteLine);
             var getById = await postgreRepo.GetByIdAsync(3);
             Console.WriteLine(getById.Title);
-            
-            var sqlServerRepo = new MoviesRepository(new SqlServerDbContext());
-            movies = await sqlServerRepo.GetAllAsync();
-            movies.ToList().ForEach(Console.WriteLine);
-            getById = await sqlServerRepo.GetByIdAsync(3);
-            Console.WriteLine(getById.Title);
+
+            // var sqlServerRepo = new MoviesRepository(new SqlServerDbContext());
+            // movies = await sqlServerRepo.GetAllAsync();
+            // movies.ToList().ForEach(Console.WriteLine);
+            // getById = await sqlServerRepo.GetByIdAsync(3);
+            // Console.WriteLine(getById.Title);
         }
     }
 }
