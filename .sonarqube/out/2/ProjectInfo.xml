@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
+  <ProjectName>CodeFirst.ConsoleUI</ProjectName>
+  <ProjectLanguage>C#</ProjectLanguage>
+  <ProjectType>Product</ProjectType>
+  <ProjectGuid>0ad6c7e7-c5ef-463f-95b9-8e6833b4b1fb</ProjectGuid>
+  <FullPath>C:\Users\pkolosov\RiderProjects\CodeFirstEntityFrameworkCore\CodeFirst.ConsoleUI\CodeFirst.ConsoleUI.csproj</FullPath>
+  <IsExcluded>false</IsExcluded>
+  <AnalysisResults>
+    <AnalysisResult Id="FilesToAnalyze" Location="C:\Users\pkolosov\RiderProjects\CodeFirstEntityFrameworkCore\.sonarqube\conf\2\FilesToAnalyze.txt" />
+  </AnalysisResults>
+  <AnalysisSettings>
+    <Property Name="sonar.cs.roslyn.reportFilePaths">C:\Users\pkolosov\RiderProjects\CodeFirstEntityFrameworkCore\CodeFirst.ConsoleUI\bin\Debug\netcoreapp3.1\CodeFirst.ConsoleUI.dll.RoslynCA.json|C:\Users\pkolosov\RiderProjects\CodeFirstEntityFrameworkCore\CodeFirst.ConsoleUI\bin\Debug\netcoreapp3.1\CodeFirst.ConsoleUI.dll.RoslynCA.json</Property>
+    <Property Name="sonar.cs.analyzer.projectOutPaths">C:\Users\pkolosov\RiderProjects\CodeFirstEntityFrameworkCore\.sonarqube\out\2</Property>
+  </AnalysisSettings>
+  <Configuration>Debug</Configuration>
+  <Platform>AnyCPU</Platform>
+  <TargetFramework>netcoreapp3.1</TargetFramework>
+</ProjectInfo>

@@ -1,0 +1,12 @@
+ë
+áC:\Users\pkolosov\RiderProjects\CodeFirstEntityFrameworkCore\CodeFirst.DataAccess.Tests\PostgreRepositoryTests\PostgreRepoCreateTest.csutf-8ë
+áC:\Users\pkolosov\RiderProjects\CodeFirstEntityFrameworkCore\CodeFirst.DataAccess.Tests\PostgreRepositoryTests\PostgreRepoDeleteTest.csutf-8ë
+áC:\Users\pkolosov\RiderProjects\CodeFirstEntityFrameworkCore\CodeFirst.DataAccess.Tests\PostgreRepositoryTests\PostgreRepoUpdateTest.csutf-8ë
+áC:\Users\pkolosov\RiderProjects\CodeFirstEntityFrameworkCore\CodeFirst.DataAccess.Tests\PostgreSqlContextTests\PostgreSqlContextTest.csutf-8è
+ÖC:\Users\pkolosov\RiderProjects\CodeFirstEntityFrameworkCore\CodeFirst.DataAccess.Tests\SqlServerContextTests\SqlServerContextTest.csutf-8ï
+ãC:\Users\pkolosov\RiderProjects\CodeFirstEntityFrameworkCore\CodeFirst.DataAccess.Tests\SqlServerRepositoryTests\SqlServerRepoCreateTest.csutf-8ï
+ãC:\Users\pkolosov\RiderProjects\CodeFirstEntityFrameworkCore\CodeFirst.DataAccess.Tests\SqlServerRepositoryTests\SqlServerRepoDeleteTest.csutf-8ï
+ãC:\Users\pkolosov\RiderProjects\CodeFirstEntityFrameworkCore\CodeFirst.DataAccess.Tests\SqlServerRepositoryTests\SqlServerRepoUpdateTest.csutf-8Ä
+uC:\Users\pkolosov\.nuget\packages\microsoft.net.test.sdk\16.4.0\build\netcoreapp2.1\Microsoft.NET.Test.Sdk.Program.csutf-8™
+ûC:\Users\pkolosov\RiderProjects\CodeFirstEntityFrameworkCore\CodeFirst.DataAccess.Tests\obj\Debug\netcoreapp3.1\.NETCoreApp,Version=v3.1.AssemblyAttributes.csutf-8¶
+öC:\Users\pkolosov\RiderProjects\CodeFirstEntityFrameworkCore\CodeFirst.DataAccess.Tests\obj\Debug\netcoreapp3.1\CodeFirst.DataAccess.Tests.AssemblyInfo.csutf-8

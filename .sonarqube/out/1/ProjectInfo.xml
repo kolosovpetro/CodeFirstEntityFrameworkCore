@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
+  <ProjectName>CodeFirst.DataAccess</ProjectName>
+  <ProjectLanguage>C#</ProjectLanguage>
+  <ProjectType>Product</ProjectType>
+  <ProjectGuid>a0dbeffc-f0c1-4d80-82a3-815033313dbc</ProjectGuid>
+  <FullPath>C:\Users\pkolosov\RiderProjects\CodeFirstEntityFrameworkCore\CodeFirst.DataAccess\CodeFirst.DataAccess.csproj</FullPath>
+  <IsExcluded>false</IsExcluded>
+  <AnalysisResults>
+    <AnalysisResult Id="FilesToAnalyze" Location="C:\Users\pkolosov\RiderProjects\CodeFirstEntityFrameworkCore\.sonarqube\conf\1\FilesToAnalyze.txt" />
+  </AnalysisResults>
+  <AnalysisSettings>
+    <Property Name="sonar.cs.roslyn.reportFilePaths">C:\Users\pkolosov\RiderProjects\CodeFirstEntityFrameworkCore\CodeFirst.DataAccess\bin\Debug\netcoreapp3.1\CodeFirst.DataAccess.dll.RoslynCA.json|C:\Users\pkolosov\RiderProjects\CodeFirstEntityFrameworkCore\CodeFirst.DataAccess\bin\Debug\netcoreapp3.1\CodeFirst.DataAccess.dll.RoslynCA.json</Property>
+    <Property Name="sonar.cs.analyzer.projectOutPaths">C:\Users\pkolosov\RiderProjects\CodeFirstEntityFrameworkCore\.sonarqube\out\1</Property>
+  </AnalysisSettings>
+  <Configuration>Debug</Configuration>
+  <Platform>AnyCPU</Platform>
+  <TargetFramework>netcoreapp3.1</TargetFramework>
+</ProjectInfo>
