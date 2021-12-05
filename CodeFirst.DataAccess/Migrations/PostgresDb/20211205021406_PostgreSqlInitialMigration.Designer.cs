@@ -3,42 +3,42 @@ using System;
 using CodeFirst.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
-namespace CodeFirst.Migrations
+namespace CodeFirst.Migrations.PostgresDb
 {
-    [DbContext(typeof(SqlServerDbContext))]
-    [Migration("20210227145138_SqlServerInitialMigration")]
-    partial class SqlServerInitialMigration
+    [DbContext(typeof(PostgresDbContext))]
+    [Migration("20211205021406_PostgreSqlInitialMigration")]
+    partial class PostgreSqlInitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .UseIdentityColumns()
-                .HasAnnotation("Relational:MaxIdentifierLength", 128)
+                .UseIdentityByDefaultColumns()
+                .HasAnnotation("Relational:MaxIdentifierLength", 63)
                 .HasAnnotation("ProductVersion", "5.0.1");
 
             modelBuilder.Entity("CodeFirst.Models.Models.Actors", b =>
                 {
                     b.Property<int>("ActorId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
+                        .HasColumnType("integer")
                         .HasColumnName("actor_id")
-                        .UseIdentityColumn();
+                        .UseIdentityByDefaultColumn();
 
                     b.Property<DateTime?>("Birthday")
-                        .HasColumnType("datetime2")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("birthday");
 
                     b.Property<string>("Firstname")
-                        .HasColumnType("nvarchar(max)")
+                        .HasColumnType("text")
                         .HasColumnName("first_name");
 
                     b.Property<string>("Lastname")
-                        .HasColumnType("nvarchar(max)")
+                        .HasColumnType("text")
                         .HasColumnName("last_name");
 
                     b.HasKey("ActorId")
@@ -249,20 +249,20 @@ namespace CodeFirst.Migrations
                 {
                     b.Property<int>("ClientId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
+                        .HasColumnType("integer")
                         .HasColumnName("client_id")
-                        .UseIdentityColumn();
+                        .UseIdentityByDefaultColumn();
 
                     b.Property<DateTime?>("Birthday")
-                        .HasColumnType("datetime2")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("birthday");
 
                     b.Property<string>("Firstname")
-                        .HasColumnType("nvarchar(max)")
+                        .HasColumnType("text")
                         .HasColumnName("first_name");
 
                     b.Property<string>("Lastname")
-                        .HasColumnType("nvarchar(max)")
+                        .HasColumnType("text")
                         .HasColumnName("last_name");
 
                     b.HasKey("ClientId")
@@ -319,16 +319,16 @@ namespace CodeFirst.Migrations
                 {
                     b.Property<int>("CopyId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
+                        .HasColumnType("integer")
                         .HasColumnName("copy_id")
-                        .UseIdentityColumn();
+                        .UseIdentityByDefaultColumn();
 
                     b.Property<bool>("Available")
-                        .HasColumnType("bit")
+                        .HasColumnType("boolean")
                         .HasColumnName("available");
 
                     b.Property<int>("MovieId")
-                        .HasColumnType("int")
+                        .HasColumnType("integer")
                         .HasColumnName("movie_id");
 
                     b.HasKey("CopyId")
@@ -465,21 +465,21 @@ namespace CodeFirst.Migrations
                 {
                     b.Property<int>("EmployeeId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
+                        .HasColumnType("integer")
                         .HasColumnName("employee_id")
-                        .UseIdentityColumn();
+                        .UseIdentityByDefaultColumn();
 
                     b.Property<string>("City")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("text");
 
                     b.Property<string>("Firstname")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasColumnType("text")
                         .HasColumnName("first_name");
 
                     b.Property<string>("Lastname")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasColumnType("text")
                         .HasColumnName("last_name");
 
                     b.Property<float?>("Salary")
@@ -538,12 +538,12 @@ namespace CodeFirst.Migrations
                 {
                     b.Property<int>("MovieId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
+                        .HasColumnType("integer")
                         .HasColumnName("movie_id")
-                        .UseIdentityColumn();
+                        .UseIdentityByDefaultColumn();
 
                     b.Property<int>("AgeRestriction")
-                        .HasColumnType("int")
+                        .HasColumnType("integer")
                         .HasColumnName("age_restriction");
 
                     b.Property<float>("Price")
@@ -551,11 +551,11 @@ namespace CodeFirst.Migrations
                         .HasColumnName("price");
 
                     b.Property<string>("Title")
-                        .HasColumnType("nvarchar(max)")
+                        .HasColumnType("text")
                         .HasColumnName("title");
 
                     b.Property<int>("Year")
-                        .HasColumnType("int")
+                        .HasColumnType("integer")
                         .HasColumnName("year");
 
                     b.HasKey("MovieId")
@@ -649,19 +649,19 @@ namespace CodeFirst.Migrations
             modelBuilder.Entity("CodeFirst.Models.Models.Rentals", b =>
                 {
                     b.Property<int>("ClientId")
-                        .HasColumnType("int")
+                        .HasColumnType("integer")
                         .HasColumnName("client_id");
 
                     b.Property<int>("CopyId")
-                        .HasColumnType("int")
+                        .HasColumnType("integer")
                         .HasColumnName("copy_id");
 
                     b.Property<DateTime?>("DateOfRental")
-                        .HasColumnType("datetime2")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("date_of_rental");
 
                     b.Property<DateTime?>("DateOfReturn")
-                        .HasColumnType("datetime2")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("date_of_return");
 
                     b.HasKey("ClientId", "CopyId")
@@ -775,11 +775,11 @@ namespace CodeFirst.Migrations
             modelBuilder.Entity("CodeFirst.Models.Models.Starring", b =>
                 {
                     b.Property<int>("ActorId")
-                        .HasColumnType("int")
+                        .HasColumnType("integer")
                         .HasColumnName("actor_id");
 
                     b.Property<int>("MovieId")
-                        .HasColumnType("int")
+                        .HasColumnType("integer")
                         .HasColumnName("movie_id");
 
                     b.HasKey("ActorId", "MovieId");

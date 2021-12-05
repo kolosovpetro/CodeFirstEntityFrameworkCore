@@ -1,5 +1,6 @@
-﻿using System.Threading.Tasks;
-using CodeFirst.Context;
+﻿using System;
+using System.Threading.Tasks;
+using CodeFirst.Factories;
 using CodeFirst.Repositories;
 using FluentAssertions;
 using NUnit.Framework;
@@ -12,7 +13,8 @@ namespace CodeFirst.DataAccess.Tests.PostgreRepositoryTests
         [Test]
         public async Task PostgreRepo_Delete_Test()
         {
-            var repo = new MoviesRepository(new PostgresDbContext());
+            var factory = new PostgresDbContextFactory();
+            var repo = new MoviesRepository(factory.CreateDbContext(Array.Empty<string>()));
             var movie = await repo.GetByIdAsync(1);
             movie.Should().NotBeNull();
             movie.MovieId.Should().Be(1);

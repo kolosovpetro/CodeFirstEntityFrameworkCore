@@ -1,5 +1,6 @@
-﻿using System.Linq;
-using CodeFirst.Context;
+﻿using System;
+using System.Linq;
+using CodeFirst.Factories;
 using FluentAssertions;
 using NUnit.Framework;
 
@@ -11,8 +12,9 @@ namespace CodeFirst.DataAccess.Tests.SqlServerContextTests
         [Test]
         public void SqlServer_Context_Test()
         {
-            BaseDbContext postgreContext = new PostgresDbContext();
-            var mov = postgreContext.Movies.First(x => x.MovieId == 3);
+            var factory = new SqlServerDbContextFactory();
+            var sqlServerContext = factory.CreateDbContext(Array.Empty<string>());
+            var mov = sqlServerContext.Movies.First(x => x.MovieId == 3);
             mov.Title.Should().Be("Terminator");
         }
     }

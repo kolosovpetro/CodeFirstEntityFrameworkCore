@@ -8,6 +8,21 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirst.DataAccess.Tests"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirst.ConsoleUI", "CodeFirst.ConsoleUI\CodeFirst.ConsoleUI.csproj", "{0AD6C7E7-C5EF-463F-95B9-8E6833B4B1FB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder", "SolutionFolder", "{F013ADEC-1032-4AC1-87DB-2AEC743DC42C}"
+ProjectSection(SolutionItems) = preProject
+	DbSchema.JPG = DbSchema.JPG
+	README.md = README.md
+	SQL\03_CreateTable_Movies_AutoIncrement.sql = SQL\03_CreateTable_Movies_AutoIncrement.sql
+	SQL\04_Drop_And_Recreate_Database.sql = SQL\04_Drop_And_Recreate_Database.sql
+	SQL\05_CreateTable_Copies_FK_MovieId.sql = SQL\05_CreateTable_Copies_FK_MovieId.sql
+	SQL\06_CreateTable_Starrings_FK_MovieId.sql = SQL\06_CreateTable_Starrings_FK_MovieId.sql
+	SQL\07_CreateTable_Actors.sql = SQL\07_CreateTable_Actors.sql
+	SQL\08_CreateTable_Clients_PK.sql = SQL\08_CreateTable_Clients_PK.sql
+	SQL\09_CreateTable_Rentals_CompositePK.sql = SQL\09_CreateTable_Rentals_CompositePK.sql
+	SQL\10_CreateTable_Empolyees.sql = SQL\10_CreateTable_Empolyees.sql
+	.gitignore = .gitignore
+EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

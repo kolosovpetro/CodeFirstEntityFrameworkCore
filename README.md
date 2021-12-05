@@ -8,25 +8,32 @@ Simple example of Entity Framework Core Code-First approach.
 
 ## Required packages and settings
 
+Nuget Packages:
 - `Microsoft.EntityFrameworkCore`
 - `Microsoft.EntityFrameworkCore.Tools`
 - `Microsoft.EntityFrameworkCore.SqlServer`
 - `Npgsql.EntityFrameworkCore.PostgreSQL`
-- Envirnomental variable `SQLSERVER_MOVIES_LOCAL_CONNSTR`
-- Envirnomental variable `POSTGRES_MOVIES_LOCAL_CONNSTR`
+
+Settings:
+- Environmental variable: `SQLSERVER_MOVIES_LOCAL_CONNSTR`
+- Environmental variable: `POSTGRES_MOVIES_LOCAL_CONNSTR`
 
 ## Entity Framework CLI commands
 
-- `dotnet-ef migrations add SqlServerInitialMigration --project CodeFirst.DataAccess --context SqlServerDbContext`
+Postgres:
 - `dotnet-ef migrations add PostgreSqlInitialMigration --project CodeFirst.DataAccess --context PostgresDbContext`
-- `dotnet-ef database update --project CodeFirst.DataAccess --context SqlServerDbContext`
 - `dotnet-ef database update --project CodeFirst.DataAccess --context PostgresDbContext`
-- `dotnet ef migrations remove`
+- `dotnet-ef database drop --project CodeFirst.DataAccess --context PostgresDbContext`
 
-## Roadmap
+MS SQL Server:
+- `dotnet-ef migrations add SqlServerInitialMigration --project CodeFirst.DataAccess --context SqlServerDbContext`
+- `dotnet-ef database update --project CodeFirst.DataAccess --context SqlServerDbContext`
+- `dotnet-ef database drop --project CodeFirst.DataAccess --context PostgresDbContext`
+
+## How to code first?
 
 - Create a separate project `Models`, where data models are stored.
-- Create a separate project `DataAccess`, that is responsible for interraction with database.
+- Create a separate project `DataAccess`, that is responsible for interaction with database.
 - Load packages to `DataAccess` project. See section **Required packages**.
 
 - Set proper environmental variable for connection string for SQL Server database. For localhost it is: 
