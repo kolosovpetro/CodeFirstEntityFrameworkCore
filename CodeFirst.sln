@@ -20,6 +20,7 @@ ProjectSection(SolutionItems) = preProject
 	SQL\08_CreateTable_Clients_PK.sql = SQL\08_CreateTable_Clients_PK.sql
 	SQL\09_CreateTable_Rentals_CompositePK.sql = SQL\09_CreateTable_Rentals_CompositePK.sql
 	SQL\10_CreateTable_Empolyees.sql = SQL\10_CreateTable_Empolyees.sql
+	.gitignore = .gitignore
 EndProjectSection
 EndProject
 Global
