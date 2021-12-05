@@ -11,17 +11,17 @@ namespace CodeFirst.ConsoleUI
     {
         private static async Task Main()
         {
-            // var postgreRepo = new MoviesRepository(new PostgresDbContext());
-            // var movies = await postgreRepo.GetAllAsync();
-            // movies.ToList().ForEach(Console.WriteLine);
-            // var getById = await postgreRepo.GetByIdAsync(3);
-            // Console.WriteLine(getById.Title);
-            //
-            // var sqlServerRepo = new MoviesRepository(new SqlServerDbContext());
-            // movies = await sqlServerRepo.GetAllAsync();
-            // movies.ToList().ForEach(Console.WriteLine);
-            // getById = await sqlServerRepo.GetByIdAsync(3);
-            // Console.WriteLine(getById.Title);
+            var postgreRepo = new MoviesRepository(new PostgresDbContext());
+            var movies = await postgreRepo.GetAllAsync();
+            movies.ToList().ForEach(Console.WriteLine);
+            var getById = await postgreRepo.GetByIdAsync(3);
+            Console.WriteLine(getById.Title);
+
+            var sqlServerRepo = new MoviesRepository(new SqlServerDbContext());
+            movies = await sqlServerRepo.GetAllAsync();
+            movies.ToList().ForEach(Console.WriteLine);
+            getById = await sqlServerRepo.GetByIdAsync(3);
+            Console.WriteLine(getById.Title);
 
             using (var context = new SqlServerDbContext())
             {
