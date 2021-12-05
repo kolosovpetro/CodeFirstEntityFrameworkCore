@@ -1,5 +1,4 @@
-﻿using System;
-using CodeFirst.Configurations;
+﻿using CodeFirst.Configurations;
 using Microsoft.EntityFrameworkCore;
 
 namespace CodeFirst.Context
@@ -8,18 +7,6 @@ namespace CodeFirst.Context
     {
         public PostgresDbContext(DbContextOptions options) : base(options)
         {
-        }
-
-        public PostgresDbContext()
-        {
-        }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            var connectionString = Environment.GetEnvironmentVariable("POSTGRES_MOVIES_LOCAL_CONNSTR");
-            optionsBuilder.UseNpgsql(connectionString
-                                     ?? throw new NullReferenceException(
-                                         $"Connection string is not got from environment {nameof(connectionString)}"));
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

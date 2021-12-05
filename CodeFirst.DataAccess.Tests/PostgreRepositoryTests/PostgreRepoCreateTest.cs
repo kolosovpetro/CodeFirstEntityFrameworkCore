@@ -1,6 +1,7 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
-using CodeFirst.Context;
+using CodeFirst.Factories;
 using CodeFirst.Models.Models;
 using CodeFirst.Repositories;
 using FluentAssertions;
@@ -14,7 +15,8 @@ namespace CodeFirst.DataAccess.Tests.PostgreRepositoryTests
         [Test]
         public async Task Postgre_Repo_Create_Test()
         {
-            var repo = new MoviesRepository(new PostgresDbContext());
+            var factory = new PostgresDbContextFactory();
+            var repo = new MoviesRepository(factory.CreateDbContext(Array.Empty<string>()));
             var movie = new Movies
             {
                 Title = "Lord of the rings",
