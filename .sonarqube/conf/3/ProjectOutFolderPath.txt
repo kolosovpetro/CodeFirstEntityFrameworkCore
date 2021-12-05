@@ -1,1 +1,0 @@
-C:\Users\pkolosov\RiderProjects\CodeFirstEntityFrameworkCore\.sonarqube\out\3

@@ -9,10 +9,6 @@ namespace CodeFirst.Context
         {
         }
 
-        protected BaseDbContext()
-        {
-        }
-
         public DbSet<Movies> Movies { get; set; }
         public DbSet<Copies> Copies { get; set; }
         public DbSet<Starring> Starring { get; set; }
