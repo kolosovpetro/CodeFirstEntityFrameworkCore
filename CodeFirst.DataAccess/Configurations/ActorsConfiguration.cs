@@ -3,7 +3,7 @@ using CodeFirst.Models.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace CodeFirst.Configurations
+namespace CodeFirst.DataAccess.Configurations
 {
     public class ActorsConfiguration : IEntityTypeConfiguration<Actors>
     {

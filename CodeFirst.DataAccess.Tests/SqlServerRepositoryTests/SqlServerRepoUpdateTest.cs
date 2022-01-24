@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
-using CodeFirst.Factories;
-using CodeFirst.Repositories;
+using CodeFirst.DataAccess.Factories;
+using CodeFirst.DataAccess.Repositories;
 using FluentAssertions;
 using NUnit.Framework;
 

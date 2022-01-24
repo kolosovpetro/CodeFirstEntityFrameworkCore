@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
-using CodeFirst.Factories;
+using CodeFirst.DataAccess.Factories;
+using CodeFirst.DataAccess.Repositories;
 using CodeFirst.Models.Models;
-using CodeFirst.Repositories;
 using FluentAssertions;
 using NUnit.Framework;
 

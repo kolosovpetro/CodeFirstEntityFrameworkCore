@@ -1,11 +1,11 @@
-﻿using CodeFirst.Context;
-using CodeFirst.Models.Models;
+﻿using CodeFirst.Models.Models;
+using Microsoft.EntityFrameworkCore;
 
-namespace CodeFirst.Repositories
+namespace CodeFirst.DataAccess.Repositories
 {
     public class EmployeesRepository : BaseRepository<Employees>
     {
-        public EmployeesRepository(BaseDbContext baseContext) : base(baseContext)
+        public EmployeesRepository(DbContext baseContext) : base(baseContext)
         {
         }
     }

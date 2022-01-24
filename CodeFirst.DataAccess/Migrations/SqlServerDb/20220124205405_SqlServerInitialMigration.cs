@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace CodeFirst.Migrations
+namespace CodeFirst.DataAccess.Migrations.SqlServerDb
 {
     public partial class SqlServerInitialMigration : Migration
     {

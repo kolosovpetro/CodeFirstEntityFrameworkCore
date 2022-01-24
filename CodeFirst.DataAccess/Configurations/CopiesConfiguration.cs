@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace CodeFirst.Configurations
+namespace CodeFirst.DataAccess.Configurations
 {
     public class CopiesConfiguration : IEntityTypeConfiguration<Copies>
     {

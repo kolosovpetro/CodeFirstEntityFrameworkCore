@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
-using CodeFirst.Factories;
-using CodeFirst.Repositories;
+using CodeFirst.DataAccess.Factories;
+using CodeFirst.DataAccess.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace CodeFirst.ConsoleUI

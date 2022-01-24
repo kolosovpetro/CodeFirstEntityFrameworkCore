@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using CodeFirst.Factories;
+using CodeFirst.DataAccess.Factories;
 using FluentAssertions;
 using NUnit.Framework;
 

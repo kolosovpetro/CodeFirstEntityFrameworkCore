@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace CodeFirst.Interfaces
+namespace CodeFirst.DataAccess.Interfaces
 {
     public interface IRepository<T>
     {

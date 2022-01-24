@@ -1,9 +1,9 @@
 ﻿using System;
-using CodeFirst.Context;
+using CodeFirst.DataAccess.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 
-namespace CodeFirst.Factories
+namespace CodeFirst.DataAccess.Factories
 {
     public class SqlServerDbContextFactory : IDesignTimeDbContextFactory<SqlServerDbContext>
     {

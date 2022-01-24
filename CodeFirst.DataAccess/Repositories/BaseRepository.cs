@@ -3,18 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using CodeFirst.Context;
-using CodeFirst.Interfaces;
+using CodeFirst.DataAccess.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
-namespace CodeFirst.Repositories
+namespace CodeFirst.DataAccess.Repositories
 {
     public abstract class BaseRepository<T> : IRepository<T> where T : class
     {
-        private readonly BaseDbContext _baseContext;
+        private readonly DbContext _baseContext;
         private readonly DbSet<T> _dbSet;
 
-        protected BaseRepository(BaseDbContext baseContext)
+        protected BaseRepository(DbContext baseContext)
         {
             _baseContext = baseContext;
             _dbSet = _baseContext.Set<T>();
