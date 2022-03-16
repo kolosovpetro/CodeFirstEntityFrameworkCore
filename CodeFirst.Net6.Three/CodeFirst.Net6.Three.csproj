@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CodeFirst.Net6.Two\CodeFirst.Net6.Two.csproj" />
+  </ItemGroup>
+
 </Project>
