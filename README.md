@@ -84,3 +84,22 @@ To get MS SQL connection string proceed:
 - Type there your server name
 - Click add connection
 - Then in properties of such connection you'd get connection string
+
+## Creating projects
+
+- dotnet new classlib --framework "netstandard2.1" -o CodeFirst.Standard.One
+- dotnet new classlib --framework "netstandard2.1" -o CodeFirst.Standard.Two
+
+
+- dotnet new classlib --framework "netcoreapp3.1" -o CodeFirst.Core31.One
+- dotnet new classlib --framework "netcoreapp3.1" -o CodeFirst.Core31.Two
+- dotnet new classlib --framework "netcoreapp3.1" -o CodeFirst.Core31.Three
+- dotnet new classlib --framework "netcoreapp3.1" -o CodeFirst.Core31.Four
+
+- dotnet new classlib --framework "net5.0" -o CodeFirst.Net5.One
+- dotnet new classlib --framework "net5.0" -o CodeFirst.Net5.Two
+- dotnet new classlib --framework "net5.0" -o CodeFirst.Net5.Three
+
+- dotnet new classlib --framework "net6.0" -o CodeFirst.Net6.One
+- dotnet new classlib --framework "net6.0" -o CodeFirst.Net6.Two
+- dotnet new classlib --framework "net6.0" -o CodeFirst.Net6.Three
