@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CodeFirst.Core31.One\CodeFirst.Core31.One.csproj" />
+  </ItemGroup>
+
 </Project>
